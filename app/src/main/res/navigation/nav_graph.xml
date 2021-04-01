@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentName">
+
+    <fragment
+        android:id="@+id/fragmentName"
+        android:name="in.codingstudio.triviaapp.ui.FragmentName"
+        android:label="Trivia App"
+        tools:layout="@layout/fragment_add_name"
+
+        >
+        <action
+            android:id="@+id/action_fragmentName_to_fragmentCricketer"
+            app:destination="@id/fragmentCricketer"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentCricketer"
+        android:name="in.codingstudio.triviaapp.ui.FragmentCricketer"
+        android:label="Trivia App"
+        tools:layout="@layout/fragment_best_cricketer" >
+        <action
+            android:id="@+id/action_fragmentCricketer_to_fragmentFlag"
+            app:destination="@id/fragmentFlag"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFlag"
+        android:name="in.codingstudio.triviaapp.ui.FragmentFlag"
+        android:label="Trivia App"
+        tools:layout="@layout/fragment_flag" >
+        <action
+            android:id="@+id/action_fragmentFlag_to_fragmentSummery"
+            app:destination="@id/fragmentSummery"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSummery"
+        android:name="in.codingstudio.triviaapp.ui.FragmentSummery"
+        android:label="Trivia App"
+        tools:layout="@layout/fragment_summery" >
+        <action
+            android:id="@+id/action_fragmentSummery_to_fragmentHistory"
+            app:destination="@id/fragmentHistory" />
+        <action
+            android:id="@+id/action_fragmentSummery_to_fragmentName"
+            app:destination="@id/fragmentName"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentHistory"
+        android:name="in.codingstudio.triviaapp.ui.FragmentHistory"
+        android:label="History"
+        tools:layout="@layout/fragment_history" >
+        <action
+            android:id="@+id/action_fragmentHistory_to_fragmentName"
+            app:destination="@id/fragmentName"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>
